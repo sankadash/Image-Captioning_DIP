@@ -30,11 +30,8 @@ def Image_Caption(picture):
 
 def main():
     st.title("Image Captioning App")
-
-    # Input a number to select the image index
     z = st.number_input("Enter an image index:", min_value=0, max_value=len(features)-1, value=999, step=1)
 
-    # Get the image corresponding to the selected index
     pic = list(features.keys())[z]
     image = features[pic].reshape((1, 2048))
 
